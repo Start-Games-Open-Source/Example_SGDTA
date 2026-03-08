@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DynamicTextAsset>
+    <metadata>
+        <type>2CB68760-4A39-D4DB-3D0A-72B63EA038A9</type>
+        <version>1.0.0</version>
+        <id>09F0521A-4395-8A51-F9DB-9FAF21277CB6</id>
+        <userfacingid>Pistol</userfacingid>
+    </metadata>
+    <data>
+        <StaticMesh>/Game/Weapons/Pistol/Meshes/SM_Pistol.SM_Pistol</StaticMesh>
+        <WeaponToSpawn>/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Pistol.BP_ShooterWeapon_Pistol_C</WeaponToSpawn>
+    </data>
+</DynamicTextAsset>

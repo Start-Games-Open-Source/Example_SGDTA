@@ -1,0 +1,3 @@
+[submodule "Plugins/SGDynamicTextAssets"]
+	path = Plugins/SGDynamicTextAssets
+	url = https://github.com/Start-Games-Open-Source/SGDynamicTextAssets.git

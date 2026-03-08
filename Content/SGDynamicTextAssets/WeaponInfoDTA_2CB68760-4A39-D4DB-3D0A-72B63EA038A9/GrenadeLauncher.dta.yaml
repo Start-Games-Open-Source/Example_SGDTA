@@ -1,0 +1,8 @@
+data:
+  StaticMesh: /Game/Weapons/GrenadeLauncher/Meshes/SM_GrenadeLauncher.SM_GrenadeLauncher
+  WeaponToSpawn: /Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_GrenadeLauncher.BP_ShooterWeapon_GrenadeLauncher_C
+metadata:
+  id: 2B5B897B-43AA-958B-978B-E0924295F808
+  type: 2CB68760-4A39-D4DB-3D0A-72B63EA038A9
+  userfacingid: GrenadeLauncher
+  version: 1.0.0

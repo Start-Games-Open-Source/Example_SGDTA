@@ -1,0 +1,14 @@
+{
+	"metadata":
+	{
+		"type": "2CB68760-4A39-D4DB-3D0A-72B63EA038A9",
+		"version": "1.0.0",
+		"id": "3889D72B-402D-90BE-DB01-5EA7C6085F03",
+		"userfacingid": "Rifle"
+	},
+	"data":
+	{
+		"StaticMesh": "/Game/Weapons/Rifle/Meshes/SM_Rifle.SM_Rifle",
+		"WeaponToSpawn": "/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Rifle.BP_ShooterWeapon_Rifle_C"
+	}
+}
