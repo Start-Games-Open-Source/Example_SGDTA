@@ -1,0 +1,83 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in the Example_SGDTA project.
+labels: ["bug"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A brief summary of the bug.
+      placeholder: "Example: ShooterPickup does not load weapon info DTA when launching the Shooter map"
+    validations:
+      required: true
+
+  - type: input
+    id: ue-version
+    attributes:
+      label: Unreal Engine Version
+      description: The version of Unreal Engine you are using.
+      placeholder: "Example: 5.6"
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro-steps
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Provide a clear, step-by-step description of how to reproduce the issue.
+      placeholder: |
+        1. Clone the repo with --recurse-submodules
+        2. Open Example_SGDTA.uproject in UE 5.6
+        3. Play in Editor on Lvl_Shooter
+        4. Walk over the Rifle pickup
+        5. Observe that the weapon mesh does not appear
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen.
+      placeholder: "Example: The Rifle pickup should load the SM_Rifle mesh and spawn BP_ShooterWeapon_Rifle."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened.
+      placeholder: "Example: The pickup spawns with no visible mesh and a warning is logged about a missing DTA file."
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: Your operating system and version (optional).
+      placeholder: "Example: Windows 11, macOS 15, Ubuntu 24.04"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log Output
+      description: |
+        Paste any relevant log output here (optional).
+        You can find logs in your project's `Saved/Logs/` directory.
+      render: text
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Video
+      description: |
+        Attach any screenshots or video that help illustrate the issue (optional but recommended).
+        Drag and drop files here or paste image links.
+
+  - type: markdown
+    attributes:
+      value: |
+        **Note:** If this is a bug in the SGDynamicTextAssets plugin itself (not specific to this example project), please report it on the [plugin repository](https://github.com/Start-Games-Open-Source/SGDynamicTextAssets/issues) instead.

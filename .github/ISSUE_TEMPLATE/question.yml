@@ -1,0 +1,47 @@
+name: Question
+description: Ask a question or request help with using the example project.
+labels: ["question", "help wanted"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A brief summary of your question.
+      placeholder: "Example: How do I add a new weapon type to the Shooter example?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-trying
+    attributes:
+      label: What are you trying to do?
+      description: |
+        Describe what you are trying to accomplish with the example project.
+      placeholder: |
+        Example: I want to add a new "Shotgun" weapon to the Shooter variant. I've created
+        the mesh and Blueprint but I'm not sure how to set up the DTA file and register
+        it with the type manifest.
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What have you tried?
+      description: |
+        Describe any approaches you have already attempted (optional).
+      placeholder: |
+        Example: I copied the WeaponInfoDTA_Rifle.dta.json file and changed the values,
+        but the new weapon doesn't appear in the DTA Browser.
+
+  - type: input
+    id: ue-version
+    attributes:
+      label: Unreal Engine Version
+      description: The version of Unreal Engine you are using (optional).
+      placeholder: "Example: 5.6"
+
+  - type: markdown
+    attributes:
+      value: |
+        **Note:** If your question is about the SGDynamicTextAssets plugin in general (not specific to this example project), consider asking on the [plugin repository](https://github.com/Start-Games-Open-Source/SGDynamicTextAssets/issues) instead.

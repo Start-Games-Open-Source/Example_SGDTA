@@ -1,0 +1,64 @@
+name: Documentation Issue
+description: Report incorrect, missing, or unclear documentation in this example project.
+labels: ["documentation"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A brief summary of the documentation issue.
+      placeholder: "Example: README is missing instructions for cloning with submodules"
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Documentation Location
+      description: |
+        Which file or section is affected?
+      placeholder: "Example: README.md, inline code comments in ShooterPickup.cpp"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What kind of documentation issue is this?
+      options:
+        - Incorrect information
+        - Missing information
+        - Unclear or confusing
+        - Outdated
+        - Typo or formatting
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: |
+        Describe what is wrong, missing, or unclear. Include the specific section if applicable.
+      placeholder: |
+        Example: The README says to clone the repo but does not mention --recurse-submodules,
+        which is required to pull in the SGDynamicTextAssets plugin. Without this flag,
+        the Plugins/SGDynamicTextAssets directory is empty and the project fails to compile.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested Fix
+      description: |
+        If you know what the correct information should be, describe it here (optional).
+      placeholder: |
+        Example: Update the clone command in the README to:
+        git clone --recurse-submodules https://github.com/Start-Games-Open-Source/Example_SGDTA.git
+
+  - type: markdown
+    attributes:
+      value: |
+        **Note:** If this is a documentation issue in the SGDynamicTextAssets plugin docs (in the `Documentation/` folder), please report it on the [plugin repository](https://github.com/Start-Games-Open-Source/SGDynamicTextAssets/issues) instead.

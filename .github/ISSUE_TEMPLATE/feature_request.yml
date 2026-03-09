@@ -1,0 +1,61 @@
+name: Feature Request
+description: Suggest a new example or demo scenario for the project.
+labels: ["feature"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A brief summary of the example or demo you would like to see.
+      placeholder: "Example: Add an example showing how to use DTAs for quest configuration"
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: |
+        What example or demo do you want to see? Describe what it should demonstrate.
+      placeholder: |
+        Example: I'd like to see an example of using DTAs to define quest data (objectives,
+        rewards, prerequisites) to show how the plugin handles more complex nested data
+        structures beyond the current weapon info example.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Case(s)
+      description: |
+        Why would this example be helpful? Describe the learning value or use case it addresses.
+      placeholder: |
+        Example:
+        - Helps developers understand how to model relational data with DTAs.
+        - Shows how FSGDynamicTextAssetRef can cross-reference between DTA types.
+        - Demonstrates versioning and migration in a realistic scenario.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-approach
+    attributes:
+      label: Proposed Approach
+      description: |
+        If you have ideas for how this example could be structured, describe them here (optional).
+      placeholder: |
+        Example: Add a new "Variant_RPG" folder alongside Variant_Shooter with a simple
+        quest system that loads quest definitions from .dta.json files.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Details
+      description: |
+        Any other context, references, or mockups that might be helpful (optional).
+
+  - type: markdown
+    attributes:
+      value: |
+        **Note:** If this is a feature request for the SGDynamicTextAssets plugin itself (not a new example), please submit it on the [plugin repository](https://github.com/Start-Games-Open-Source/SGDynamicTextAssets/issues) instead.
