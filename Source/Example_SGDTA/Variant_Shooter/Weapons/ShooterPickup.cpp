@@ -10,6 +10,7 @@
 #include "Engine/World.h"
 #include "TimerManager.h"
 #include "WeaponInfoDTA.h"
+#include "WeaponMetadata.h"
 
 #include "Engine/AssetManager.h"
 
@@ -100,6 +101,13 @@ void AShooterPickup::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor*
 	// have we collided against a weapon holder?
 	if (IShooterWeaponHolder* WeaponHolder = Cast<IShooterWeaponHolder>(OtherActor))
 	{
+		if (UWeaponInfoDTA* info = WeaponType.Get<UWeaponInfoDTA>(this))
+		{
+			if (info->Metadata)
+			{
+				info->Metadata->ExecuteOnPickup(this, info, OtherActor);
+			}
+		}
 		WeaponHolder->AddWeaponClass(WeaponClass);
 
 		// hide this mesh

@@ -9,5 +9,16 @@
     <data>
         <StaticMesh>/Game/Weapons/Pistol/Meshes/SM_Pistol.SM_Pistol</StaticMesh>
         <WeaponToSpawn>/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Pistol.BP_ShooterWeapon_Pistol_C</WeaponToSpawn>
+        <Metadata>
+            <SG_INST_OBJ_CLASS>/Script/Example_SGDTA.TextMetadata</SG_INST_OBJ_CLASS>
+            <Message>Picked up pistol.</Message>
+            <DisplayTime>3.0</DisplayTime>
+            <Color>
+                <r>1.0</r>
+                <g>0.0</g>
+                <b>0.0</b>
+                <a>1.0</a>
+            </Color>
+        </Metadata>
     </data>
 </DynamicTextAsset>

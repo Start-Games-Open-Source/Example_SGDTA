@@ -9,6 +9,8 @@
 #include "WeaponInfoDTA.generated.h"
 
 class UStaticMesh;
+class UWeaponMetadata;
+
 class AShooterWeapon;
 
 /**
@@ -27,4 +29,8 @@ public:
 	/** Weapon class to grant on pickup */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Weapon Info")
 	TSoftClassPtr<AShooterWeapon> WeaponToSpawn = nullptr;
+
+	/** Metadata to execute when this weapon is picked up. */
+	UPROPERTY(EditAnywhere, Instanced, BlueprintReadOnly, Category = "Weapon Info")
+	TObjectPtr<UWeaponMetadata> Metadata;
 };
