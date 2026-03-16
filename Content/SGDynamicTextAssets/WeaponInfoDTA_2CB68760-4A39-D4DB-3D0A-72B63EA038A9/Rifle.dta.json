@@ -10,18 +10,28 @@
 	{
 		"StaticMesh": "/Game/Weapons/Rifle/Meshes/SM_Rifle.SM_Rifle",
 		"WeaponToSpawn": "/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Rifle.BP_ShooterWeapon_Rifle_C",
-		"Metadata":
-		{
-			"SG_INST_OBJ_CLASS": "/Script/Example_SGDTA.TextMetadata",
-			"Message": "Picked up rifle.",
-			"DisplayTime": 3,
-			"Color":
+		"Metadata": [
 			{
-				"r": 1,
-				"g": 0,
-				"b": 0,
-				"a": 1
+				"SG_INST_OBJ_CLASS": "/Script/Example_SGDTA.ShooterDataAssetMetadata",
+				"DataAssets": [
+					"/Game/Variant_Shooter/DataAssets/DA_Test3_Shooter.DA_Test3_Shooter"
+				]
 			}
-		}
+		]
+	},
+	"sgdtAssetBundles":
+	{
+		"Weapon": [
+			{
+				"property": "WeaponInfoDTA.WeaponToSpawn",
+				"path": "/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Rifle.BP_ShooterWeapon_Rifle_C"
+			}
+		],
+		"ExampleBundles": [
+			{
+				"property": "ShooterDataAssetMetadata.DataAssets",
+				"path": "/Game/Variant_Shooter/DataAssets/DA_Test3_Shooter.DA_Test3_Shooter"
+			}
+		]
 	}
 }

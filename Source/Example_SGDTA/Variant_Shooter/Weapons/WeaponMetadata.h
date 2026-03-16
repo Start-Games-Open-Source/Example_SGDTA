@@ -12,6 +12,7 @@
 class IShooterWeaponHolder;
 
 class UWeaponInfoDTA;
+class UShooterDataAsset;
 
 class AShooterPickup;
 
@@ -86,6 +87,26 @@ public:
 	/** The DTA Ref to print the name of(if valid). */
 	UPROPERTY(EditAnywhere)
 	FSGDynamicTextAssetRef DTARef;
+
+protected:
+
+	// UWeaponMetadata overrides
+	virtual void Native_ExecuteOnPickup(AShooterPickup& Pickup, const UWeaponInfoDTA& DTA, TScriptInterface<IShooterWeaponHolder>& WeaponHolder) override;
+	// ~UWeaponMetadata overrides
+};
+
+/**
+ * Simple Asset Bundle metadata that retrieves the asset bundle'd Shooter Data Assets and then notifies them that it was picked up.
+ */
+UCLASS()
+class EXAMPLE_SGDTA_API UShooterDataAssetMetadata : public UWeaponMetadata
+{
+	GENERATED_BODY()
+public:
+
+	/** Shooter Data Assets to notify that they were picked up. */
+	UPROPERTY(EditAnywhere, meta = (AssetBundles = "ExampleBundles"))
+	TSet<TSoftObjectPtr<UShooterDataAsset>> DataAssets;
 
 protected:
 

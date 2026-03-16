@@ -1,13 +1,9 @@
 data:
   Metadata:
-    Color:
-      a: 1
-      b: 0
-      g: 0
-      r: 1
-    DisplayTime: 3
-    Message: Picked up grenade launcher.
-    SG_INST_OBJ_CLASS: /Script/Example_SGDTA.TextMetadata
+    -
+      DataAssets:
+        - /Game/Variant_Shooter/DataAssets/DA_Test3_Shooter.DA_Test3_Shooter
+      SG_INST_OBJ_CLASS: /Script/Example_SGDTA.ShooterDataAssetMetadata
   StaticMesh: /Game/Weapons/GrenadeLauncher/Meshes/SM_GrenadeLauncher.SM_GrenadeLauncher
   WeaponToSpawn: /Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_GrenadeLauncher.BP_ShooterWeapon_GrenadeLauncher_C
 metadata:
@@ -15,3 +11,12 @@ metadata:
   type: 2CB68760-4A39-D4DB-3D0A-72B63EA038A9
   userfacingid: GrenadeLauncher
   version: 1.0.0
+sgdtAssetBundles:
+  ExampleBundles:
+    -
+      path: /Game/Variant_Shooter/DataAssets/DA_Test3_Shooter.DA_Test3_Shooter
+      property: ShooterDataAssetMetadata.DataAssets
+  Weapon:
+    -
+      path: /Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_GrenadeLauncher.BP_ShooterWeapon_GrenadeLauncher_C
+      property: WeaponInfoDTA.WeaponToSpawn

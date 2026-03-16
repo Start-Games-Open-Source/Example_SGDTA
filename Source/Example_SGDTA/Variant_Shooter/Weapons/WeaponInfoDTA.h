@@ -27,10 +27,10 @@ public:
 	TSoftObjectPtr<UStaticMesh> StaticMesh = nullptr;
 
 	/** Weapon class to grant on pickup */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Weapon Info")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Weapon Info", meta = (AssetBundles = "Weapon"))
 	TSoftClassPtr<AShooterWeapon> WeaponToSpawn = nullptr;
 
 	/** Metadata to execute when this weapon is picked up. */
 	UPROPERTY(EditAnywhere, Instanced, BlueprintReadOnly, Category = "Weapon Info")
-	TObjectPtr<UWeaponMetadata> Metadata;
+	TArray<TObjectPtr<UWeaponMetadata>> Metadata;
 };
