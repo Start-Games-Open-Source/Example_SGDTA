@@ -1,10 +1,11 @@
 {
-	"metadata":
+	"sgFileInformation":
 	{
 		"type": "2CB68760-4A39-D4DB-3D0A-72B63EA038A9",
 		"version": "1.0.0",
 		"id": "3889D72B-402D-90BE-DB01-5EA7C6085F03",
-		"userfacingid": "Rifle"
+		"userfacingid": "Rifle",
+		"fileFormatVersion": "2.0.0"
 	},
 	"data":
 	{
