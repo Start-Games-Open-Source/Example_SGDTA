@@ -10,21 +10,21 @@
     <data>
         <StaticMesh>/Game/Weapons/Pistol/Meshes/SM_Pistol.SM_Pistol</StaticMesh>
         <WeaponToSpawn>/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Pistol.BP_ShooterWeapon_Pistol_C</WeaponToSpawn>
-        <sgFileInformation>
+        <Metadata>
             <Item>
                 <SG_INST_OBJ_CLASS>/Script/Example_SGDTA.ShooterDataAssetMetadata</SG_INST_OBJ_CLASS>
                 <DataAssets>
-                    <Item>/Game/Variant_Shooter/DataAssets/DA_Test2_Shooter.DA_Test2_Shooter</Item>
+                    <Item>/Game/Variant_Shooter/DataAssets/DA_Test1_Shooter.DA_Test1_Shooter</Item>
                 </DataAssets>
             </Item>
-        </sgFileInformation>
+        </Metadata>
     </data>
     <sgdtAssetBundles>
         <bundle name="Weapon">
             <entry property="WeaponInfoDTA.WeaponToSpawn" path="/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Pistol.BP_ShooterWeapon_Pistol_C"/>
         </bundle>
         <bundle name="ExampleBundles">
-            <entry property="ShooterDataAssetMetadata.DataAssets" path="/Game/Variant_Shooter/DataAssets/DA_Test2_Shooter.DA_Test2_Shooter"/>
+            <entry property="ShooterDataAssetMetadata.DataAssets" path="/Game/Variant_Shooter/DataAssets/DA_Test1_Shooter.DA_Test1_Shooter"/>
         </bundle>
     </sgdtAssetBundles>
 </DynamicTextAsset>

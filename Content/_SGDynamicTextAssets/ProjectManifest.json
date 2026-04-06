@@ -1,0 +1,52 @@
+{
+	"schema": "dta_project_manifest",
+	"organizationVersion": 1,
+	"typeManifests": [
+		"TypeManifests/SGDynamicTextAsset_TypeManifest.json"
+	],
+	"extenderManifests": [
+		"SerializerExtenders/DTA_AssetBundles_Extenders.dta.json"
+	],
+	"formatVersions":
+	{
+		"3":
+		{
+			"serializerName": "YAML",
+			"fileExtension": ".dta.yaml",
+			"currentSerializerVersion": "2.0.0",
+			"highestFound": "2.0.0",
+			"lowestFound": "2.0.0",
+			"totalFileCount": 1,
+			"countByVersion":
+			{
+				"2.0.0": 1
+			}
+		},
+		"2":
+		{
+			"serializerName": "XML",
+			"fileExtension": ".dta.xml",
+			"currentSerializerVersion": "2.0.0",
+			"highestFound": "2.0.0",
+			"lowestFound": "2.0.0",
+			"totalFileCount": 1,
+			"countByVersion":
+			{
+				"2.0.0": 1
+			}
+		},
+		"1":
+		{
+			"serializerName": "JSON",
+			"fileExtension": ".dta.json",
+			"currentSerializerVersion": "2.0.0",
+			"highestFound": "2.0.0",
+			"lowestFound": "2.0.0",
+			"totalFileCount": 1,
+			"countByVersion":
+			{
+				"2.0.0": 1
+			}
+		}
+	}
+}

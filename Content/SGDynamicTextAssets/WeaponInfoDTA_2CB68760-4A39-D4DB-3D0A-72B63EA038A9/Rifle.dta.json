@@ -15,7 +15,7 @@
 			{
 				"SG_INST_OBJ_CLASS": "/Script/Example_SGDTA.ShooterDataAssetMetadata",
 				"DataAssets": [
-					"/Game/Variant_Shooter/DataAssets/DA_Test3_Shooter.DA_Test3_Shooter"
+					"/Game/Variant_Shooter/DataAssets/DA_Test2_Shooter.DA_Test2_Shooter"
 				]
 			}
 		]
@@ -31,7 +31,7 @@
 		"ExampleBundles": [
 			{
 				"property": "ShooterDataAssetMetadata.DataAssets",
-				"path": "/Game/Variant_Shooter/DataAssets/DA_Test3_Shooter.DA_Test3_Shooter"
+				"path": "/Game/Variant_Shooter/DataAssets/DA_Test2_Shooter.DA_Test2_Shooter"
 			}
 		]
 	}
