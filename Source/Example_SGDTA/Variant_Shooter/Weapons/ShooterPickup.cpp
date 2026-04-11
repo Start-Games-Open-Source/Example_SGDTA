@@ -10,9 +10,12 @@
 #include "Engine/World.h"
 #include "TimerManager.h"
 #include "WeaponInfoDTA.h"
+#include "WeaponLogs.h"
 #include "WeaponMetadata.h"
 
 #include "Engine/AssetManager.h"
+
+#include "Statics/SGDynamicTextAssetStatics.h"
 
 AShooterPickup::AShooterPickup()
 {
@@ -74,7 +77,8 @@ void AShooterPickup::BeginPlay()
 {
 	Super::BeginPlay();
 
-	SG_LOAD_REF_SIMPLE(WeaponType, this,
+	const TArray<FName> bundles = { "ExampleBundles", "Weapon" };
+	SG_LOAD_REF_WITH_BUNDLES(WeaponType, this, bundles,
 		{
 			if (!self.IsValid() || !bSuccess)
 			{
@@ -83,7 +87,7 @@ void AShooterPickup::BeginPlay()
 			if (UWeaponInfoDTA* info = Cast<UWeaponInfoDTA>(Provider.GetObject()))
 			{
 				// Copy the weapon class
-				self->WeaponClass = UAssetManager::Get().GetStreamableManager().LoadSynchronous(info->WeaponToSpawn);
+				self->WeaponClass = info->WeaponToSpawn.Get();
 			}
 		});
 }
@@ -103,9 +107,10 @@ void AShooterPickup::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor*
 	{
 		if (UWeaponInfoDTA* info = WeaponType.Get<UWeaponInfoDTA>(this))
 		{
-			if (info->Metadata)
+			UE_LOG(LogWeapon, Log, TEXT("NOTE: Picking up DTA(%s)|metadata count(%d)"), *info->GetUserFacingId(), info->Metadata.Num());
+			for (const TObjectPtr<UWeaponMetadata>& metaData : info->Metadata)
 			{
-				info->Metadata->ExecuteOnPickup(this, info, OtherActor);
+				metaData->ExecuteOnPickup(this, info, OtherActor);
 			}
 		}
 		WeaponHolder->AddWeaponClass(WeaponClass);

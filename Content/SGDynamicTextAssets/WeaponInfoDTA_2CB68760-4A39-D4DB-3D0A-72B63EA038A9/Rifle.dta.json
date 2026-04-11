@@ -1,27 +1,38 @@
 {
-	"metadata":
+	"sgFileInformation":
 	{
 		"type": "2CB68760-4A39-D4DB-3D0A-72B63EA038A9",
 		"version": "1.0.0",
 		"id": "3889D72B-402D-90BE-DB01-5EA7C6085F03",
-		"userfacingid": "Rifle"
+		"userfacingid": "Rifle",
+		"fileFormatVersion": "2.0.0"
 	},
 	"data":
 	{
 		"StaticMesh": "/Game/Weapons/Rifle/Meshes/SM_Rifle.SM_Rifle",
 		"WeaponToSpawn": "/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Rifle.BP_ShooterWeapon_Rifle_C",
-		"Metadata":
-		{
-			"SG_INST_OBJ_CLASS": "/Script/Example_SGDTA.TextMetadata",
-			"Message": "Picked up rifle.",
-			"DisplayTime": 3,
-			"Color":
+		"Metadata": [
 			{
-				"r": 1,
-				"g": 0,
-				"b": 0,
-				"a": 1
+				"SG_INST_OBJ_CLASS": "/Script/Example_SGDTA.ShooterDataAssetMetadata",
+				"DataAssets": [
+					"/Game/Variant_Shooter/DataAssets/DA_Test2_Shooter.DA_Test2_Shooter"
+				]
 			}
-		}
+		]
+	},
+	"sgdtAssetBundles":
+	{
+		"Weapon": [
+			{
+				"property": "WeaponInfoDTA.WeaponToSpawn",
+				"path": "/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Rifle.BP_ShooterWeapon_Rifle_C"
+			}
+		],
+		"ExampleBundles": [
+			{
+				"property": "ShooterDataAssetMetadata.DataAssets",
+				"path": "/Game/Variant_Shooter/DataAssets/DA_Test2_Shooter.DA_Test2_Shooter"
+			}
+		]
 	}
 }

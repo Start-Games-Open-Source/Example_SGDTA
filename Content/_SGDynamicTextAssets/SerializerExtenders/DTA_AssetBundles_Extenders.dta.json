@@ -1,0 +1,27 @@
+{
+	"schema": "dta_extender_manifest",
+	"version": 1,
+	"framework": "AssetBundles",
+	"extenders": [
+		{
+			"extenderId": "95C8103D-4F8C-925D-4EF5-A29EC7AC7C8D",
+			"className": "SGDTADefaultAssetBundleExtender",
+			"classPath": "/Script/SGDynamicTextAssetsRuntime.SGDTADefaultAssetBundleExtender"
+		},
+		{
+			"extenderId": "F7950109-4D44-6513-3352-4B8738431522",
+			"className": "SGDTAPerPropertyAssetBundleExtender",
+			"classPath": "/Script/SGDynamicTextAssetsRuntime.SGDTAPerPropertyAssetBundleExtender"
+		},
+		{
+			"extenderId": "76C725B1-468E-52FE-EEFD-C1AC1F123392",
+			"className": "SGDTATestAssetBundleExtenderA",
+			"classPath": "/Script/SGDynamicTextAssetsEditor.SGDTATestAssetBundleExtenderA"
+		},
+		{
+			"extenderId": "9E5F1F9E-454B-DB40-314C-099B09998AB2",
+			"className": "SGDTATestAssetBundleExtenderB",
+			"classPath": "/Script/SGDynamicTextAssetsEditor.SGDTATestAssetBundleExtenderB"
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"schema": "dta_type_manifest",
+	"version": 1,
+	"rootTypeId": "2A095A8C-45FA-A0B2-E24E-34911EE18106",
+	"types": [
+		{
+			"typeId": "2A095A8C-45FA-A0B2-E24E-34911EE18106",
+			"className": "SGDynamicTextAsset",
+			"classPath": "/Script/SGDynamicTextAssetsRuntime.SGDynamicTextAsset",
+			"parentTypeId": "00000000-0000-0000-0000-000000000000"
+		},
+		{
+			"typeId": "2CB68760-4A39-D4DB-3D0A-72B63EA038A9",
+			"className": "WeaponInfoDTA",
+			"classPath": "/Script/Example_SGDTA.WeaponInfoDTA",
+			"parentTypeId": "2A095A8C-45FA-A0B2-E24E-34911EE18106"
+		}
+	]
+}

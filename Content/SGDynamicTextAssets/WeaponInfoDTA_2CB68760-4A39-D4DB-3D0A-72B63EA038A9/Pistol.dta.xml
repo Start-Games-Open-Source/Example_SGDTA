@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DynamicTextAsset>
-    <metadata>
+    <sgFileInformation>
         <type>2CB68760-4A39-D4DB-3D0A-72B63EA038A9</type>
         <version>1.0.0</version>
         <id>09F0521A-4395-8A51-F9DB-9FAF21277CB6</id>
         <userfacingid>Pistol</userfacingid>
-    </metadata>
+        <fileFormatVersion>2.0.0</fileFormatVersion>
+    </sgFileInformation>
     <data>
         <StaticMesh>/Game/Weapons/Pistol/Meshes/SM_Pistol.SM_Pistol</StaticMesh>
         <WeaponToSpawn>/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Pistol.BP_ShooterWeapon_Pistol_C</WeaponToSpawn>
         <Metadata>
-            <SG_INST_OBJ_CLASS>/Script/Example_SGDTA.TextMetadata</SG_INST_OBJ_CLASS>
-            <Message>Picked up pistol.</Message>
-            <DisplayTime>3.0</DisplayTime>
-            <Color>
-                <r>1.0</r>
-                <g>0.0</g>
-                <b>0.0</b>
-                <a>1.0</a>
-            </Color>
+            <Item>
+                <SG_INST_OBJ_CLASS>/Script/Example_SGDTA.ShooterDataAssetMetadata</SG_INST_OBJ_CLASS>
+                <DataAssets>
+                    <Item>/Game/Variant_Shooter/DataAssets/DA_Test1_Shooter.DA_Test1_Shooter</Item>
+                </DataAssets>
+            </Item>
         </Metadata>
     </data>
+    <sgdtAssetBundles>
+        <bundle name="Weapon">
+            <entry property="WeaponInfoDTA.WeaponToSpawn" path="/Game/Variant_Shooter/Blueprints/Pickups/Weapons/BP_ShooterWeapon_Pistol.BP_ShooterWeapon_Pistol_C"/>
+        </bundle>
+        <bundle name="ExampleBundles">
+            <entry property="ShooterDataAssetMetadata.DataAssets" path="/Game/Variant_Shooter/DataAssets/DA_Test1_Shooter.DA_Test1_Shooter"/>
+        </bundle>
+    </sgdtAssetBundles>
 </DynamicTextAsset>

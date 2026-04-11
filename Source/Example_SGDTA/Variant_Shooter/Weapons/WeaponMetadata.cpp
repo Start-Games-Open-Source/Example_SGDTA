@@ -2,9 +2,11 @@
 
 #include "WeaponMetadata.h"
 
+#include "ShooterDataAsset.h"
 #include "ShooterPickup.h"
+#include "ShooterUtilityLibrary.h"
+#include "UI/ShooterUIMessage.h"
 #include "WeaponInfoDTA.h"
-
 #include "Weapons/WeaponLogs.h"
 
 void UWeaponMetadata::ExecuteOnPickup(AShooterPickup* Pickup, UWeaponInfoDTA* DTA, TScriptInterface<IShooterWeaponHolder> WeaponHolder)
@@ -43,9 +45,32 @@ void UDTARefMetadata::Native_ExecuteOnPickup(AShooterPickup& Pickup, const UWeap
 			FString::Printf(TEXT("%s: No DTA Reference Set."), *DTA.GetUserFacingId()));
 		return;
 	}
-	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red,
-		FString::Printf(TEXT("%s: %s picked up weapon and DTA Ref: %s"),
-		*DTA.GetUserFacingId(),
-		*GetNameSafe(WeaponHolder.GetObject()),
-		*DTARef.GetUserFacingId()));
+	FShooterUIMessage message;
+	message.Message = FText::Format(INVTEXT("{0}: {1} picked up weapon and DTA Ref: {2}")
+		, FText::FromString(DTA.GetUserFacingId())
+		, FText::FromString(GetNameSafe(WeaponHolder.GetObject()))
+		, FText::FromString(DTARef.GetUserFacingId()));
+
+	UShooterUtilityLibrary::SendShooterUIMessage(&Pickup, message);
+}
+
+void UShooterDataAssetMetadata::Native_ExecuteOnPickup(AShooterPickup& Pickup, const UWeaponInfoDTA& DTA,
+	TScriptInterface<IShooterWeaponHolder>& WeaponHolder)
+{
+	AShooterPickup* pickupPtr = &Pickup;
+	const UWeaponInfoDTA* dtaPtr = &DTA;
+	for (const TSoftObjectPtr<UShooterDataAsset>& asset : DataAssets)
+	{
+		UE_LOG(LogWeapon, Log, TEXT("NOTE: %s: valid data asset(%s)"),
+			*DTA.GetUserFacingId(),
+			*asset.GetAssetName());
+		if (!asset.IsValid())
+		{
+			UE_LOG(LogWeapon, Error, TEXT("%s: %s failed to load via asset bundles."),
+				*DTA.GetUserFacingId(),
+				*asset.GetAssetName());
+			continue;
+		}
+		asset.Get()->NotifyPickedUp(pickupPtr, dtaPtr, WeaponHolder);
+	}
 }
